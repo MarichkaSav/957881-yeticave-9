@@ -1,7 +1,7 @@
 # Личный проект «YetiCave»
 
 * Студент: [Мария Савчук](https://up.htmlacademy.ru/php/9/user/957881).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Скляров](https://htmlacademy.ru/profile/id926687).
 
 ---
 
