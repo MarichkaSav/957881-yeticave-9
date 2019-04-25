@@ -2,10 +2,47 @@
 $is_auth = rand(0, 1);
 
 $user_name = 'Мария Савчук';
+
+$categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
+$lots = [
+    [
+        'name' => '2014 Rossignol District Snowboard',
+        'category' => 'Доски и лыжи',
+        'price' => 10999,
+        'photo-url' => 'img/lot-1.jpg'
+    ],
+    [
+        'name' => 'DC Ply Mens 2016/2017 Snowboard',
+        'category' => 'Доски и лыжи',
+        'price' => 159999,
+        'photo-url' => 'img/lot-2.jpg'
+    ],
+    [
+        'name' => 'Крепления Union Contact Pro 2015 года размер L/XL',
+        'category' => 'Крепления',
+        'price' => 8000,
+        'photo-url' => 'img/lot-3.jpg'
+    ],
+    [
+        'name' => 'Ботинки для сноуборда DC Mutiny Charocal',
+        'category' => 'Ботинки',
+        'price' => 10999,
+        'photo-url' => 'img/lot-4.jpg'
+    ],
+    [
+        'name' => 'Куртка для сноуборда DC Mutiny Charocal',
+        'category' => 'Одежда',
+        'price' => 7500,
+        'photo-url' => 'img/lot-5.jpg'
+    ],
+    [
+        'name' => 'Маска Oakley Canopy',
+        'category' => 'Разное',
+        'price' => 5400,
+        'photo-url' => 'img/lot-6.jpg'
+    ],
+];
 ?>
-
-<?php $categories = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"]; ?>
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -16,7 +53,6 @@ $user_name = 'Мария Савчук';
 </head>
 <body>
 <div class="page-wrapper">
-
 <header class="main-header">
     <div class="main-header__container container">
         <h1 class="visually-hidden">YetiCave</h1>
@@ -28,7 +64,6 @@ $user_name = 'Мария Савчук';
             <input class="main-header__search-btn" type="submit" name="find" value="Найти">
         </form>
         <a class="main-header__add-lot button" href="pages/add-lot.html">Добавить лот</a>
-
         <nav class="user-menu">
         <?php if ($is_auth === 1): ?>
             <div class="user-menu__logged">
@@ -49,7 +84,6 @@ $user_name = 'Мария Савчук';
         </nav>
     </div>
 </header>
-
 <main class="container">
     <section class="promo">
         <h2 class="promo__title">Нужен стафф для катки?</h2>
@@ -67,46 +101,6 @@ $user_name = 'Мария Савчук';
             <h2>Открытые лоты</h2>
         </div>
         <ul class="lots__list">
-        <?php
-            $lots = [
-                [
-                    'name' => '2014 Rossignol District Snowboard',
-                    'category' => 'Доски и лыжи',
-                    'price' => 10999,
-                    'photo-url' => 'img/lot-1.jpg'
-                ],
-                [
-                    'name' => 'DC Ply Mens 2016/2017 Snowboard',
-                    'category' => 'Доски и лыжи',
-                    'price' => 159999,
-                    'photo-url' => 'img/lot-2.jpg'
-                ],
-                [
-                    'name' => 'Крепления Union Contact Pro 2015 года размер L/XL',
-                    'category' => 'Крепления',
-                    'price' => 8000,
-                    'photo-url' => 'img/lot-3.jpg'
-                ],
-                [
-                    'name' => 'Ботинки для сноуборда DC Mutiny Charocal',
-                    'category' => 'Ботинки',
-                    'price' => 10999,
-                    'photo-url' => 'img/lot-4.jpg'
-                ],
-                [
-                    'name' => 'Куртка для сноуборда DC Mutiny Charocal',
-                    'category' => 'Одежда',
-                    'price' => 7500,
-                    'photo-url' => 'img/lot-5.jpg'
-                ],
-                [
-                    'name' => 'Маска Oakley Canopy',
-                    'category' => 'Разное',
-                    'price' => 5400,
-                    'photo-url' => 'img/lot-6.jpg'
-                ],
-            ];
-            ?>
             <?php foreach ($lots as $lot): ?>
             <li class="lots__item lot">
                 <div class="lot__image">
@@ -131,7 +125,6 @@ $user_name = 'Мария Савчук';
     </section>
 </main>
 </div>
-
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
@@ -183,7 +176,6 @@ $user_name = 'Мария Савчук';
         </div>
     </div>
 </footer>
-
 <script src="flatpickr.js"></script>
 <script src="script.js"></script>
 </body>
