@@ -1,4 +1,12 @@
 <?php
+function format_price(float $price): string {
+    $ceiled_price = ceil($price);
+    if ($ceiled_price < 1000) {
+        return $ceiled_price;
+    }
+    return number_format($ceiled_price, 0, " ", "  ");
+}
+
 $is_auth = rand(0, 1);
 
 $user_name = 'Мария Савчук';
@@ -112,7 +120,7 @@ $lots = [
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?= $lot['price']; ?><b class="rub">р</b></span>
+                            <span class="lot__cost"><?= format_price($lot['price']); ?><b class="rub">р</b></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
