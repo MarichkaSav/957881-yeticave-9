@@ -4,7 +4,7 @@ function format_price(float $price): string {
     if ($ceiled_price < 1000) {
         return $ceiled_price;
     }
-    return number_format($ceiled_price, 0, " ", "  ");
+    return number_format($ceiled_price, 0, "", " ");
 }
 
 $is_auth = rand(0, 1);
